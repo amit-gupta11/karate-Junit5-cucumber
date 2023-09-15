@@ -8,7 +8,7 @@ Feature: Demo
       Scenario Outline: <Scenario Description>
         Given url BaseUrl+'<Organization>'
         When method GET
-        Then status 200
+        Then status <Status>
         And print 'Response is :- ' , response
         Then match response.portalConfig.name == '<Organization>'
 
