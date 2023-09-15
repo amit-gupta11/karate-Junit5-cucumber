@@ -5,7 +5,7 @@ function fn() {
   karate.configure('report', {showLog: true, showAllSteps: false});
 
   var env = karate.env || 'DEV';
-  var protocol = 'https';
+  var protocol = 'http';
 
 if(!env)
 {
@@ -16,17 +16,17 @@ env = 'DEV';
        };
    if (env.toUpperCase() == 'DEV')
    {
-         config.BaseUrl= protocol + '://reqres.in/api/users?page=2'
+         config.BaseUrl= protocol + '://34.131.12.229/api/Portal?organization='
          config.PostUrl= protocol + '://reqres.in/api/users?delay=3'
    }
    else if (env.toUpperCase() == 'INT')
    {
-         config.BaseUrl= protocol + '://reqres.in/api/users?page=2'
+         config.BaseUrl= protocol + '://34.131.12.229/api/Portal?organization='
          config.PostUrl= protocol + '://reqres.in/api/users?delay=3'
    }
    else if (env.toUpperCase() == 'QA')
    {
-         config.BaseUrl= protocol + '://reqres.in/api/users?page=2'
+         config.BaseUrl= protocol + '://34.131.12.229/api/Portal?organization='
          config.PostUrl= protocol + '://reqres.in/api/users?delay=3'
    }
    return config;
