@@ -10,6 +10,7 @@ Feature: Demo
         When method GET
         Then status 200
         And print 'Response is :- ' , response
+        Then match response.portalConfig.name == '<Organization>'
 
         Examples:
           | karate.setup().csv |
